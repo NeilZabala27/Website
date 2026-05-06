@@ -195,35 +195,6 @@ body {
   height: 65px;
 }
 
-.desktop .play-now-default-wrapper {
-  position: absolute;
-  top: 24px;
-  left: 1240px;
-  width: 100px;
-  height: 38px;
-  background-color: #415333d6;
-  border-radius: 69px;
-  border: 1px solid #6cd020;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background-color 0.3s ease, border-color 0.3s ease;
-}
-
-.desktop .play-now-default-wrapper:hover {
-  background-color: #6cd020;
-  border-color: #ffffff;
-}
-
-.desktop .play-now-default {
-  width: 80%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  text-decoration: none;
-}
 
 .desktop .text-wrapper-6 {
   display: flex;
@@ -242,7 +213,7 @@ body {
 .desktop .team {
   position: absolute;
   top: 33px;
-  left: 1166px;
+  left: 1250px;
   width: 47px;
   height: 20px;
   display: flex;
@@ -263,7 +234,7 @@ body {
 .desktop .how-to-play {
   position: absolute;
   top: 33px;
-  left: 1039px;
+  left: 1130px;
   width: 96px;
   height: 20px;
   display: flex;
@@ -284,7 +255,7 @@ body {
 .desktop .about {
   position: absolute;
   top: 33px;
-  left: 956px;
+  left: 1060px;
   width: 49px;
   height: 20px;
   display: flex;
@@ -305,7 +276,7 @@ body {
 .desktop .home {
   position: absolute;
   top: 33px;
-  left: 875px;
+  left: 980px;
   width: 46px;
   height: 20px;
   display: flex;
@@ -1058,7 +1029,6 @@ body {
 .desktop .how-to-play a:focus-visible,
 .desktop .team a:focus-visible,
 .desktop .component:focus-visible,
-.desktop .play-now-default:focus-visible,
 .desktop .text-wrapper-21:focus-visible,
 .desktop .text-wrapper-24:focus-visible,
 .desktop .text-wrapper-27:focus-visible,
@@ -1097,6 +1067,7 @@ body {
 @media (max-width: 768px) {
   #hamburger {
     display: flex;
+    right: 20px;
   }
 
   #navLinks {
@@ -1121,5 +1092,23 @@ body {
   #navLinks .team {
     position: static;
     padding: 12px 40px;
+    width: 100%;
+  }
+
+  #navLinks .home a,
+  #navLinks .about a,
+  #navLinks .how-to-play a,
+  #navLinks .team a {
+    font-size: 18px;  /* bigger text for mobile */
+    display: block;
+  }
+
+  /* Hide desktop sections on mobile or allow horizontal scroll */
+  .desktop .home-page,
+  .desktop .about-2,
+  .desktop .game-play,
+  .desktop .meet-the-team {
+    width: 100% !important;
+    overflow-x: hidden;
   }
 }
